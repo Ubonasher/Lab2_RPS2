@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateMedrabTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateMedrabLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{medrabController.selected.id}" title="#{bundle.CreateMedrabTitle_id}" />
+                    <h:outputLabel value="#{bundle.CreateMedrabLabel_fio}" for="fio" />
+                    <h:inputText id="fio" value="#{medrabController.selected.fio}" title="#{bundle.CreateMedrabTitle_fio}" />
+                    <h:outputLabel value="#{bundle.CreateMedrabLabel_dr}" for="dr" />
+                    <h:inputText id="dr" value="#{medrabController.selected.dr}" title="#{bundle.CreateMedrabTitle_dr}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateMedrabLabel_otdelenie}" for="otdelenie" />
+                    <h:selectOneMenu id="otdelenie" value="#{medrabController.selected.otdelenie}" title="#{bundle.CreateMedrabTitle_otdelenie}" >
+                        <f:selectItems value="#{otdelenieController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{medrabController.create}" value="#{bundle.CreateMedrabSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{medrabController.prepareList}" value="#{bundle.CreateMedrabShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateMedrabIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

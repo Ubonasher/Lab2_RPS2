@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <resource-bundle>
+            <base-name>/Bundle</base-name>
+            <var>bundle</var>
+        </resource-bundle>
+    </application>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>ex2</from-outcome>
+            <to-view-id>/exp2.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>ex1</from-outcome>
+            <to-view-id>/exp1.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>ex3</from-outcome>
+            <to-view-id>/exp3.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>ex4</from-outcome>
+            <to-view-id>/exp4.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>ex5</from-outcome>
+            <to-view-id>/exp5.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

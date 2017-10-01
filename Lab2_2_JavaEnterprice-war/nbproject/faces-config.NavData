@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="otdelenie/View.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="medrab/View.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="index.xhtml" x="395" y="480" zoom="true"/>
+        <Node id="exp1.xhtml" x="921" y="327" zoom="true"/>
+        <Node id="otdelenie/List.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="exp5.xhtml" x="681" y="622" zoom="true"/>
+        <Node id="exp4.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="exp3.xhtml" x="911" y="457" zoom="false"/>
+        <Node id="medrab/Create.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="exp2.xhtml" x="922" y="374" zoom="true"/>
+        <Node id="otdelenie/Create.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="otdelenie/Edit.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="medrab/List.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="template.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="medrab/Edit.xhtml" x="150" y="600" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

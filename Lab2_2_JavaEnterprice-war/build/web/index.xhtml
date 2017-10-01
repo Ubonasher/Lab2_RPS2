@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <br />
+        <h:link outcome="/medrab/List" value="Show All Medrab Items"/>
+        <br />
+        <h:link outcome="/otdelenie/List" value="Show All Otdelenie Items"/>
+
+        <br />    <br />    <br />
+
+        №1: дать контейнеру закончить транзакцию подтверждением.
+        <h:form>
+            <h:commandButton action="exp1" value="Первый эксперимент"/>
+        </h:form>
+        №2: закончить транзакцию откатом в сессионном фасаде для
+        первой базы данных.
+        <h:form>
+            <h:commandButton action="exp2" value="Второй эксперимент"/>
+        </h:form>
+        №3: закончить транзакцию откатом, выбросив системное
+        исключение EJBException в сессионном фасаде для второй базы данных после
+        обновления источника данных.
+        <h:form>
+            <h:commandButton action="exp3" value="Третий эксперимент"/>
+        </h:form>
+        №4:эксперимент, аналогичный 3, но обновление второй базы данных должно
+        выполняться вне контекста транзакции.
+        <h:form>
+            <h:commandButton action="exp4" value="Четвёртый эксперимент"/>
+        </h:form>
+        №5: эксперимент, аналогичный 4, но обновление первой базы данных должно
+        выполняться в контексте новой транзакции.
+        <h:form>
+            <h:commandButton action="exp5" value="Пятый эксперимент"/>
+        </h:form>
+    </h:body>
+
+
+</html>
+
